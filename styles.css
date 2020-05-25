@@ -20,8 +20,71 @@ a:hover {
   color: violet;
 }
 
+#billboard {
+  height: 500px;
+  background: url('images/aisle.jpg') no-repeat top center;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+}
+
+#running-order {
+    height: 400px;
+    background: url('images/domes.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+}
+
+#brides-side-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bride-member {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#bride-member h2,
+#bride-member p {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
+.running-order {
+  margin: auto;
+}
+
+.head-fix {
+  margin: auto;
+}
+
+.top-pink {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+  margin-bottom: 0;
+}
+
+.table p {
+  background-color: #d9d9d9;
+background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+  border-bottom: 1px black solid;
+  margin: auto;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 160px;
+  width: 160px;
+  color: grayscale;
+}
 
 /* MEDIA QUERIES */
 
@@ -33,5 +96,8 @@ a:hover {
 
 @media only screen and (min-width: 1024px) {
 
+  #brides-side-members {
+    flex-direction: row;
+  }
 
 }
