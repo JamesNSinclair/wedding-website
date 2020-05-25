@@ -50,12 +50,33 @@ a:hover {
   margin: auto;
 }
 
+.modal-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#information {
+  background-color: #f1dfd1;
+background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+border-radius: 25px;
+}
+
 #bride-member h2,
 #bride-member p {
   margin-left: auto;
   margin-right: auto;
 }
 
+#question {
+  color: white;
+  background: blue;
+  border: 1px black solid;
+  margin-bottom: 0;
+}
+
+.answer {
+  display: none;
+  s}
 
 .running-order {
   margin: auto;
@@ -83,8 +104,7 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   overflow: hidden;
   height: 160px;
   width: 160px;
-  color: grayscale;
-}
+  }
 
 /* MEDIA QUERIES */
 
@@ -98,6 +118,11 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 
   #brides-side-members {
     flex-direction: row;
+  }
+
+  .modal-section {
+        flex-direction: row;
+
   }
 
 }
