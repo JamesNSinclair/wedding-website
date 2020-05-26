@@ -2,7 +2,7 @@ let question = document.querySelectorAll("#question");
 let answer = document.querySelectorAll('#answer');
 const hotelModal = document.querySelectorAll('#hotel-modal');
 const hotels = document.querySelectorAll('.hotels');
-let modal = document.querySelector('.modal-content');
+let modal = document.querySelector('#modalHTML');
 const button2 = document.querySelector('#button-2');
 const button1 = document.querySelector('#button-1');
 
