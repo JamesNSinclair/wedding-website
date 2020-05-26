@@ -44,6 +44,11 @@ a:hover {
   align-items: center;
 }
 
+.icons {
+  height: 150px;
+  fill: burlywood;
+}
+
 #bride-member {
   display: flex;
   flex-direction: column;
@@ -56,7 +61,7 @@ a:hover {
 }
 
 #information {
-  background-color: #f1dfd1;
+background-color: #f1dfd1;
 background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
 border-radius: 25px;
 }
@@ -67,16 +72,42 @@ border-radius: 25px;
   margin-right: auto;
 }
 
-#question {
+#quest {
   color: white;
-  background: blue;
+  z-index: 2;
+  background: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);;
+  margin-bottom: 0;
+  }
+
+#question {
+  background: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   border: 1px black solid;
   margin-bottom: 0;
 }
 
+#answer {
+  z-index: -10;
+  margin: 0;
+  }
+
+.slide {
+  transition: all 0.4s ease-in;
+  height:50px;
+  opacity: 1;
+  margin-bottom: 0;
+  }
+
+
+
+.height {
+
+   opacity: 0;
+    height: 0px;
+}
+
 .answer {
   display: none;
-  s}
+  }
 
 .running-order {
   margin: auto;
@@ -105,6 +136,14 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   height: 160px;
   width: 160px;
   }
+
+.hotel {
+  border-radius: 15px;
+  overflow: hidden;
+  height: 300px;
+  width: 460px;
+}
+
 
 /* MEDIA QUERIES */
 
