@@ -2,7 +2,9 @@ let question = document.querySelectorAll("#question");
 let answer = document.querySelectorAll('#answer');
 const hotelModal = document.querySelectorAll('#hotel-modal');
 const hotels = document.querySelectorAll('.hotels');
-let modal = document.querySelector('#modalHTML');
+const activities = document.querySelectorAll('.activities');
+let modals = document.querySelectorAll('#modalHTML');
+const button3 = document.querySelector('#button-3');
 const button2 = document.querySelector('#button-2');
 const button1 = document.querySelector('#button-1');
 
@@ -31,15 +33,27 @@ questions.addEventListener('click', (e) => {
 
 button1.addEventListener('click', () => {
   console.log('yo');
-  createScroll(0);
+  createScroll(0, 0);
 });
 
+button2.addEventListener('click', () => {
+  console.log('yo');
+  createScroll(0, 1);
+});
 
+button3.addEventListener('click', () => {
+  console.log('yo');
+  createScroll(0, 2);
+});
 
-function createScroll(index) {
+function createScroll(index, button) {
 
-	let next = document.querySelector('.next');
-	let previous = document.querySelector('.previous');
+  let nexts = document.querySelectorAll('.next');
+  let previouss = document.querySelectorAll('.previous');
+
+console.log(nexts);
+	let next = nexts[button];
+	let previous = previouss[button];
 
 
 		next.addEventListener('click', (e) => {
@@ -47,7 +61,7 @@ function createScroll(index) {
 			if (index < 7) {
 					index += 1;
           console.log(index);
-				 createModal(index);
+				 createModal(index, button);
 				 		} else {
 				 console.log('next')
 				}
@@ -57,7 +71,7 @@ function createScroll(index) {
 			if (index > 0) {
 					index += -1;
           console.log(index);
-		 			createModal(index);
+		 			createModal(index, button);
 			  } else {
 				console.log('previous')
 			}
@@ -66,13 +80,22 @@ function createScroll(index) {
 }
 
 
-function createModal(index) {
+function createModal(index, button) {
+  modal = modals[button]
+  if (button === 0) {
  let changeHotel = hotels[index];
 	console.log(changeHotel);
 
   const html = changeHotel;
 
 modal.innerHTML = html.innerHTML;
+} else if (button === 1) {
 
+let changeActivities = activities[index];
+ console.log(changeActivities);
 
+ const html = changeActivities;
+
+modal.innerHTML = html.innerHTML;
+}
 }
