@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noticia Text', serif;
 }
 
 body {
@@ -12,12 +12,8 @@ body {
 
 }
 
-a {
-  color: purple;
-}
-
-a:hover {
-  color: violet;
+.whiteline {
+  border-bottom: 1px white solid;
 }
 
 #billboard {
@@ -72,16 +68,20 @@ border-radius: 25px;
   margin-right: auto;
 }
 
+.footer {
+  background: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+
+}
+
 #quest {
-  color: white;
+
   z-index: 2;
-  background: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);;
+    background: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   margin-bottom: 0;
   }
 
 #question {
-  background: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
-  border: 1px black solid;
+  border: 0.5px black solid;
   margin-bottom: 0;
 }
 
@@ -97,6 +97,10 @@ border-radius: 25px;
   margin-bottom: 0;
   }
 
+
+.footerimage {
+    height: 40px;
+}
 
 
 .height {
