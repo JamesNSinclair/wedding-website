@@ -3,6 +3,7 @@ let answer = document.querySelectorAll('#answer');
 const hotelModal = document.querySelectorAll('#hotel-modal');
 const hotels = document.querySelectorAll('.hotels');
 const activities = document.querySelectorAll('.activities');
+const travel = document.querySelectorAll('.travel');
 let modals = document.querySelectorAll('#modalHTML');
 const button3 = document.querySelector('#button-3');
 const button2 = document.querySelector('#button-2');
@@ -33,17 +34,18 @@ questions.addEventListener('click', (e) => {
 
 button1.addEventListener('click', () => {
   let number = hotels.length;
-  console.log(number);
+
   createScroll(0, 0, number);
 });
 
 button2.addEventListener('click', () => {
   let number = activities.length;
-    console.log(number);
+
   createScroll(0, 1, number);
 });
 
 button3.addEventListener('click', () => {
+  let number = travel.length;
   console.log('yo');
   createScroll(0, 2, number);
 });
@@ -98,5 +100,14 @@ let changeActivities = activities[index];
 
  const html = changeActivities;
 modal.innerHTML = html.innerHTML;
+
+} else if (button === 2) {
+
+let changeTravel = travel[index];
+ console.log(changeTravel);
+
+ const html = changeTravel;
+modal.innerHTML = html.innerHTML;
 }
+
 }
