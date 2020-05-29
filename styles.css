@@ -7,9 +7,18 @@
   font-family: 'Noticia Text', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
 
+}
+
+p {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .whiteline {
@@ -165,12 +174,17 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 }
 
 
+
 /* The Close Button */
 .close {
   float: right;
   color: #c8c8c8;
   font-size: 28px;
   font-weight: bold;
+}
+
+.activity-button {
+  transform: translateY(15px);
 }
 
 /* Previous and next Buttons */
@@ -185,12 +199,12 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 
 .previous {
   float: left;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .next {
   float: right;
-  left: 15px;
+  left: 5px;
 }
 
 .previous:hover,
@@ -228,7 +242,7 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
 
   .activity {
     object-fit: cover;
-    height: 280px;
+    height: 480px;
     width: 150px;
     }
 

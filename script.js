@@ -32,33 +32,35 @@ questions.addEventListener('click', (e) => {
 
 
 button1.addEventListener('click', () => {
-  console.log('yo');
-  createScroll(0, 0);
+  let number = hotels.length;
+  console.log(number);
+  createScroll(0, 0, number);
 });
 
 button2.addEventListener('click', () => {
-  console.log('yo');
-  createScroll(0, 1);
+  let number = activities.length;
+    console.log(number);
+  createScroll(0, 1, number);
 });
 
 button3.addEventListener('click', () => {
   console.log('yo');
-  createScroll(0, 2);
+  createScroll(0, 2, number);
 });
 
-function createScroll(index, button) {
+function createScroll(index, button, number) {
 
   let nexts = document.querySelectorAll('.next');
   let previouss = document.querySelectorAll('.previous');
 
-console.log(nexts);
+
 	let next = nexts[button];
 	let previous = previouss[button];
 
 
 		next.addEventListener('click', (e) => {
 
-			if (index < 7) {
+			if (index < number) {
 					index += 1;
           console.log(index);
 				 createModal(index, button);
@@ -87,15 +89,14 @@ function createModal(index, button) {
 	console.log(changeHotel);
 
   const html = changeHotel;
-
 modal.innerHTML = html.innerHTML;
+
 } else if (button === 1) {
 
 let changeActivities = activities[index];
  console.log(changeActivities);
 
  const html = changeActivities;
-
 modal.innerHTML = html.innerHTML;
 }
 }
