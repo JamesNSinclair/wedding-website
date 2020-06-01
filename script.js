@@ -9,6 +9,8 @@ const button3 = document.querySelector('#button-3');
 const button2 = document.querySelector('#button-2');
 const button1 = document.querySelector('#button-1');
 
+
+
 for (let i=0; i < question.length; i+=1 ) {
     let questions = question[i];
     let answers = answer[i];
@@ -32,8 +34,11 @@ questions.addEventListener('click', (e) => {
 }
 
 
+
+
 button1.addEventListener('click', () => {
   let number = hotels.length;
+
 
   createScroll(0, 0, number);
 });
@@ -50,6 +55,23 @@ button3.addEventListener('click', () => {
   createScroll(0, 2, number);
 });
 
+
+
+function buttonDisplay(index, number, next, previous) {
+if (index === 0) {
+  previous.style.visibility = "hidden";
+
+} else if (index === number-1) {
+      next.style.visibility = "hidden";
+
+
+} else {
+    previous.style.visibility = "visible";
+      next.style.visibility = "visible";}
+       console.log(index, number);
+    };
+
+
 function createScroll(index, button, number) {
 
   let nexts = document.querySelectorAll('.next');
@@ -59,13 +81,16 @@ function createScroll(index, button, number) {
 	let next = nexts[button];
 	let previous = previouss[button];
 
+  createModal(0, button, number, next, previous);
+    next.style.visibility = "visible";
 
 		next.addEventListener('click', (e) => {
 
 			if (index < number) {
 					index += 1;
           console.log(index);
-				 createModal(index, button);
+
+				 createModal(index, button, number, next, previous);
 				 		} else {
 				 console.log('next')
 				}
@@ -75,7 +100,7 @@ function createScroll(index, button, number) {
 			if (index > 0) {
 					index += -1;
           console.log(index);
-		 			createModal(index, button);
+                		 			createModal(index, button, number, next, previous);
 			  } else {
 				console.log('previous')
 			}
@@ -84,7 +109,7 @@ function createScroll(index, button, number) {
 }
 
 
-function createModal(index, button) {
+function createModal(index, button, number, next, previous) {
   modal = modals[button]
   if (button === 0) {
  let changeHotel = hotels[index];
@@ -110,4 +135,5 @@ let changeTravel = travel[index];
 modal.innerHTML = html.innerHTML;
 }
 
+buttonDisplay(index, number, next, previous);
 }

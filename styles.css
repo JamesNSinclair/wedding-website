@@ -4,7 +4,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Noticia Text', serif;
+font-family: 'Niconne', cursive;
+font-size: 105%;
 }
 
 html {
@@ -16,7 +17,15 @@ body {
 
 }
 
+.nav-item {
+  font-family: 'Alegreya', serif;
+  font-size: 80%;
+
+}
+
 p {
+font-family: 'Alegreya', serif;
+font-size: 80%;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -80,6 +89,7 @@ p {
 
 
 .icons {
+  margin-top: 15px;
   height: 100px;
   fill: burlywood;
 }
@@ -121,6 +131,23 @@ border-radius: 25px;
    column-gap: 25px;
 }
 
+
+#information button {
+  margin-bottom: 15px;
+
+}
+  #travel h2,
+  #modal-header h2,
+#activity h2 {
+  padding-bottom: 25px;
+}
+    #travel p,
+    .modal-content p,
+    #activity p {
+      font-size: 15px;
+    }
+
+
 #quest {
 
   z-index: 2;
@@ -130,7 +157,7 @@ border-radius: 25px;
 
 .activities-height {
   padding-top: 10px;
-  height: 135px;
+  height: 115px;
   margin-left: 35px;
   margin-right: 35px;
 }
@@ -185,7 +212,10 @@ border-radius: 25px;
    opacity: 0;
     height: 0px;
 }
-
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .answer {
   display: none;
   }
@@ -198,9 +228,10 @@ border-radius: 25px;
   margin: auto;
 }
 
+
 .top-pink {
   background-color: #eec0c6;
-  background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+  background-image: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
   margin-bottom: 0;
 }
 
@@ -216,6 +247,9 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   overflow: hidden;
   height: 150px;
   width: 150px;
+  border-color: linear-gradient(315deg, #fea684 0%, #feb9a3 74%);
+  border-width: 1px;
+  border-style: solid;
   }
 
 .hotel {
@@ -225,7 +259,14 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   width: 300px;
 }
 
+.activity {
+  height: 300px;
+  width: 100%;
+}
 
+.previous {
+  visibility: hidden;
+}
 
 /* The Close Button */
 .close {
@@ -293,15 +334,24 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   }
 
   .activity {
+    margin: 0 auto 15px;
+    border-radius: 0px;
     object-fit: cover;
-    height: 480px;
+    height: 430px;
     width: 150px;
     }
 
     .hotel {
+      margin: 0 auto 15px;
       height: 280px;
-      width: 400px;
+      width: 430px;
     }
+
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+    }
+
 
   .columns {
      column-count: 3;
@@ -315,5 +365,10 @@ background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
   .modal-section {
         flex-direction: row;
   }
+
+  .activities-height {
+    margin-top: 15px;
+      height: 115px;
+}
 
 }
