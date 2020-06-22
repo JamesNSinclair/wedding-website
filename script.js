@@ -9,6 +9,47 @@ const button3 = document.querySelector('#button-3');
 const button2 = document.querySelector('#button-2');
 const button1 = document.querySelector('#button-1');
 
+const profilepic = document.getElementById('profile-pic');
+const name = document.getElementById('name');
+const town = document.getElementById('town');
+const contactInfo = 'https://randomuser.me/api/?results=12&inc=name,location,email,dob,cell,picture&?nat=us,gb';
+
+
+
+fetch(contactInfo)
+.then(response => response.json())
+.then(data => summonDiv(data.results))
+
+function fillDiv(dataLengthCount, number) {
+const	goesHereNum =	'goesHere' + number;
+let goesHere = document.getElementById(goesHereNum);
+console.log(goesHereNum);
+const html = `
+		<img class='profile-pic' src="${dataLengthCount.picture.large}">
+        <span class="text-center">
+        <p>Hi! My Name Is</p>
+				<h3> ${dataLengthCount.name.first}</h3>
+        </span>
+				</div>
+	</div>
+	`;
+
+	goesHere.innerHTML = html;
+
+}
+
+function summonDiv(data) {
+	for (let i = 0; i < data.length; i+=1) {
+		//emptyDiv(data);
+		number = i+1;
+		let dataLengthCount = data[i];
+		console.log(dataLengthCount)
+		fillDiv(dataLengthCount, number);
+
+
+	}
+	}
+
 
 
 for (let i=0; i < question.length; i+=1 ) {
